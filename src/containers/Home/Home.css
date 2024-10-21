@@ -1,3 +1,11 @@
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 .main {
   background: url(../../images/main_img.png) top right no-repeat;
   background-size: contain;

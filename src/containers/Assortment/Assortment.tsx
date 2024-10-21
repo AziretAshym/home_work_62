@@ -1,5 +1,5 @@
-import './AboutUs.css';
-const AboutUs = () => {
+import './Assortment.css';
+const Assortment = () => {
   return (
     <>
       <div className="plan_block">
@@ -38,4 +38,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Assortment;

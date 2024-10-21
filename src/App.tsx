@@ -1,22 +1,30 @@
 import './App.css'
 import Toolbar from './components/Toolbar/Toolbar.tsx';
 import Home from './containers/Home/Home.tsx';
-import AboutUs from './containers/AboutUs/AboutUs.tsx';
+import Assortment from './containers/Assortment/Assortment.tsx';
 import Contacts from './containers/Contacts/Contacts.tsx';
+import Footer from './components/Footer/Footer.tsx';
+import { Route, Routes } from 'react-router-dom';
+import Portfolio from './containers/Portfolio/Portfolio.tsx';
+
 
 function App() {
 
   return (
     <>
-
-      <body>
-      <div className="container">
+      <header>
         <Toolbar/>
-        <Home/>
-        <AboutUs/>
-        <Contacts />
-      </div>
-      </body>
+      </header>
+      <Routes>
+        <Route path="/" element={(<Home/>)}></Route>
+        <Route path="/assortment" element={<Assortment/>}/>
+        <Route path="/portfolio" element={(<Portfolio/>)}></Route>
+        <Route path="/contacts" element={(<Contacts/>)}></Route>
+        <Route path="*" element={<h1 style={{textAlign: "center"}}>Not Found</h1>}></Route>
+      </Routes>
+      <footer>
+        <Footer/>
+      </footer>
     </>
   )
 }

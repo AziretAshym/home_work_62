@@ -1,16 +1,23 @@
 import './Toolbar.css';
+import { NavLink, Outlet } from 'react-router-dom';
+import * as React from 'react';
+
 const Toolbar = () => {
+
   return (
     <>
       <header className="header">
-        <div className="header-container">
-          <h1><a href="#" className="logo">Travelulu</a></h1>
+        <div className="container">
+          <div className="header-container">
+            <h1><NavLink to="/" className="logo">Travelulu</NavLink></h1>
             <ul className="nav-list">
-              <li><a href="#" className="nav-link">Home</a></li>
-              <li><a href="#" className="nav-link">About us</a></li>
-              <li><a href="#" className="nav-link">Contact</a></li>
-              <li><a href="#" className="nav-link">Portfolio</a></li>
+              <li><NavLink to="/" className="nav-link">Home</NavLink></li>
+              <li><NavLink to="assortment" className="nav-link">Assortment</NavLink></li>
+              <li><NavLink to="portfolio" className="nav-link">Portfolio</NavLink></li>
+              <li><NavLink to="contacts" className="nav-link">Contacts</NavLink></li>
             </ul>
+            <Outlet/>
+          </div>
         </div>
       </header>
     </>
