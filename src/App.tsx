@@ -6,6 +6,7 @@ import Contacts from './containers/Contacts/Contacts.tsx';
 import Footer from './components/Footer/Footer.tsx';
 import { Route, Routes } from 'react-router-dom';
 import Portfolio from './containers/Portfolio/Portfolio.tsx';
+import Booking from './containers/Booking/Booking.tsx';
 
 
 function App() {
@@ -18,11 +19,13 @@ function App() {
       <Routes>
         <Route path="/" element={(<Home/>)}></Route>
         <Route path="/assortment" element={<Assortment/>}/>
-        <Route path="/portfolio" element={(<Portfolio/>)}></Route>
+        <Route path="/portfolio" element={(<Portfolio/>)}>
+          <Route path="booking" element={(<Booking />)} />
+        </Route>
         <Route path="/contacts" element={(<Contacts/>)}></Route>
         <Route path="*" element={<h1 style={{textAlign: "center"}}>Not Found</h1>}></Route>
       </Routes>
-      <footer>
+      <footer className="footer">
         <Footer/>
       </footer>
     </>

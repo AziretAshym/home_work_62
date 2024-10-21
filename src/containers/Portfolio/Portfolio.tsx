@@ -1,4 +1,5 @@
 import "./Portfolio.css";
+import { Link, Outlet } from 'react-router-dom';
 const Portfolio = () => {
   return (
     <>
@@ -17,7 +18,7 @@ const Portfolio = () => {
             <h5 className="portfolio-title-item">Paris Getaway</h5>
             <p className="portfolio-desc-item">A romantic trip to the city of lights, including guided tours of iconic
               landmarks.</p>
-            <a href="#" className="portfolio-link">Book a tour</a>
+            <Link to="/portfolio/booking" className="portfolio-link">Book a tour</Link>
           </div>
 
           <div className="portfolio-item">
@@ -29,7 +30,7 @@ const Portfolio = () => {
             <h5 className="portfolio-title-item">Caribbean Adventure</h5>
             <p className="portfolio-desc-item">A week-long cruise with island hopping, watersports, and luxury
               accommodations.</p>
-            <a href="#" className="portfolio-link">Book a tour</a>
+            <Link to="/portfolio/booking" className="portfolio-link">Book a tour</Link>
           </div>
 
           <div className="portfolio-item">
@@ -41,11 +42,11 @@ const Portfolio = () => {
             <h5 className="portfolio-title-item">Safari in Kenya</h5>
             <p className="portfolio-desc-item">Experience the wild plains of Africa with a guided safari through Kenya's
               parks.</p>
-            <a href="#" className="portfolio-link">Book a tour</a>
+            <Link to="/portfolio/booking" className="portfolio-link">Book a tour</Link>
           </div>
         </div>
       </div>
-
+      <Outlet />
     </>
   );
 };
