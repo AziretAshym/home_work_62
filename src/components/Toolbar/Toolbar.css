@@ -8,7 +8,7 @@
 
 .header {
   padding: 12px 0 14px;
-  border-bottom: 1px solid #BCA4FF;
+  border-bottom: 1px solid #bca4ff;
   position: relative;
   margin-bottom: 39px;
 }
@@ -43,13 +43,12 @@
   transition: transform 1s;
 }
 
-
 .nav-list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 30px
+  gap: 30px;
 }
 
 .nav-link {
