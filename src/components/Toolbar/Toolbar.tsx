@@ -15,22 +15,90 @@ const Toolbar = () => {
             </h1>
             <ul className="nav-list">
               <li>
-                <NavLink to="/" className="nav-link">
+                <NavLink to="/"
+                         className={({ isActive, isTransitioning }) =>
+                           [
+                             isActive ? "active" : "",
+                             isTransitioning ? "transitioning" : "",
+                           ].join(" ")
+                         }
+                           style={({ isActive, isTransitioning }) => {
+                           return {
+                             fontWeight: isActive ? "bold" : "",
+                             viewTransitionName: isTransitioning ? "slide" : "",
+                             display: "block",
+                             fontSize: "20px",
+                             color: "#af9aee",
+                             textDecoration: isActive ? "underline" : "none"
+                           };
+                         }}
+                >
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink to="assortment" className="nav-link">
+                <NavLink to="assortment"
+                         className={({ isActive, isTransitioning }) =>
+                           [
+                             isActive ? "active" : "",
+                             isTransitioning ? "transitioning" : "",
+                           ].join(" ")
+                         }
+                         style={({ isActive, isTransitioning }) => {
+                           return {
+                             fontWeight: isActive ? "bold" : "",
+                             viewTransitionName: isTransitioning ? "slide" : "",
+                             display: "block",
+                             fontSize: "20px",
+                             color: "#af9aee",
+                             textDecoration: isActive ? "underline" : "none"
+                           };
+                         }}
+                >
                   Assortment
                 </NavLink>
               </li>
               <li>
-                <NavLink to="portfolio" className="nav-link">
+                <NavLink to="portfolio"
+                         className={({ isActive, isTransitioning }) =>
+                           [
+                             isActive ? "active" : "",
+                             isTransitioning ? "transitioning" : "",
+                           ].join(" ")
+                         }
+                         style={({ isActive, isTransitioning }) => {
+                           return {
+                             fontWeight: isActive ? "bold" : "",
+                             viewTransitionName: isTransitioning ? "slide" : "",
+                             display: "block",
+                             fontSize: "20px",
+                             color: "#af9aee",
+                             textDecoration: isActive ? "underline" : "none"
+                           };
+                         }}
+                >
                   Portfolio
                 </NavLink>
               </li>
               <li>
-                <NavLink to="contacts" className="nav-link">
+                <NavLink to="contacts"
+                         className={({ isActive, isTransitioning }) =>
+                           [
+                             isActive ? "active" : "",
+                             isTransitioning ? "transitioning" : "",
+                           ].join(" ")
+                         }
+                         style={({ isActive, isTransitioning }) => {
+                           return {
+                             fontWeight: isActive ? "bold" : "",
+                             viewTransitionName: isTransitioning ? "slide" : "",
+                             display: "block",
+                             fontSize: "20px",
+                             color: "#af9aee",
+                             textDecoration: isActive ? "underline" : "none"
+                           };
+                         }}
+                >
                   Contacts
                 </NavLink>
               </li>
